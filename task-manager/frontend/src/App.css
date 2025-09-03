@@ -1,0 +1,159 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.kanban-table {
+  margin-top: 10px;
+  overflow-x: auto;
+}
+
+.kanban-row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.kanban-column {
+  flex: 1;
+  min-width: 180px;     /* tighter columns */
+  border: 1px solid #ccc;
+  padding: 5px;         /* reduced padding */
+  border-radius: 6px;
+  background: #f9f9f9;
+}
+
+.kanban-column h3 {
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 14px;      /* smaller text */
+  background: #eee;
+  padding: 3px;
+  border-radius: 4px;
+}
+
+.task-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 5px;         /* compact padding */
+  margin-bottom: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 13px;      /* smaller font */
+}
+
+.task-card:hover {
+  background: #e6f2ff;
+}
+
+/* Compact class ensures everything is tight */
+.compact {
+  gap: 10px !important;
+  padding: 4px !important;
+  margin: 0 !important;
+}
+
+
+/* Side panel container */
+.side-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 300px; /* adjust width as needed */
+  background: #fff;
+  border-left: 2px solid #ccc;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Panel content */
+.side-panel-content {
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Close button */
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  float: right;
+  cursor: pointer;
+}
+
+/* Animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.floating-box {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 12px;
+  width: 220px;
+  z-index: 1000;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  float: right;
+  cursor: pointer;
+}
+
+.show-more-btn {
+  margin-top: 5px;
+  padding: 4px 
+}
